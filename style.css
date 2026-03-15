@@ -1,0 +1,145 @@
+/* Harmonine - style.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, 'Geneva', Verdana, sans-serif;
+  background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+  color: #e0e0e0;
+  overflow: hidden;
+  user-select: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.titlebar {
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 12px;
+  background: rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  z-index: 10;
+}
+
+.window-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 500;
+  font-size: 14px;
+  color: #fff;
+}
+
+.title-icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+.app {
+  display: flex;
+  height: calc(100vh - 40px);
+  position: relative;
+}
+
+.player {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.cover-container {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.cover {
+  width: 220px;
+  height: 220px;
+  border-radius: 12px;
+  object-fit: cover;
+  background-color: #222;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+.now-playing {
+  margin-bottom: 30px;
+  font-size: 20px;
+  font-weight: 600;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  color: #fff;
+}
+
+.scroll-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.scroll-text {
+  display: inline-block;
+  transition: all 0.15s ease;
+}
+
+.scroll-text.no-scroll {
+  animation: none;
+  padding-left: 0;
+  text-align: center;
+  width: 100%;
+  transition: all 0.15s ease;
+}
+
+.scroll-text:hover {
+  color: #add9ff;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.download-btn {
+  background: #3a8393;
+  color: #fff;
+  font-size: 24px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  box-shadow: 0 5px 15px rgba(58, 131, 147, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.download-btn:hover {
+  transform: scale(1.05);
+  background: #639ed3;
+  box-shadow: 0 5px 20px rgba(99, 158, 211, 0.5);
+}
+
+.version-text {
+  margin-top: 20px;
+  font-size: 12px;
+  color: rgba(255,255,255,0.4);
+}
